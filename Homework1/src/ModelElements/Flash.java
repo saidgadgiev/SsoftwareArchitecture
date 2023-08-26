@@ -8,7 +8,7 @@ public class Flash {
     Float power;
 
 
-    public Flash(Point3D location, Angle3D angle, Color color, Float power) {
+    public Flash(Point3D location, Angle3D angle, Color color, float power) {
         this.location = location;
         this.angle = angle;
         this.color = color;

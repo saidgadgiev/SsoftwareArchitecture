@@ -1,8 +1,12 @@
 package InMemoryModel;
 
 import ModelElements.*;
+import ModelElements.Utils.Angle3D;
+import ModelElements.Utils.Color;
+import ModelElements.Utils.Point3D;
 
 public class ModelStore implements IModelChanger{
+    static float power = 0;
     public PoligonalModel models;
     public Scene scenes;
     public Flash flashes;
@@ -11,9 +15,9 @@ public class ModelStore implements IModelChanger{
 
     public ModelStore(IModelChangeObserver changeObserver) {
         this.changeObserver = changeObserver;
-        this.models = new PoligonalModel(new Poligon());
-        this.cameras = new Camera();
-        this.flashes = new Flash();
+        this.models = new PoligonalModel(new Poligon(new Point3D()), new Texture());
+        this.cameras = new Camera(new Point3D(), new Angle3D());
+        this.flashes = new Flash(new Point3D(), new Angle3D(), new Color(),power);
         this.scenes = new Scene(this.models, this.flashes, this.cameras);
     }
 
