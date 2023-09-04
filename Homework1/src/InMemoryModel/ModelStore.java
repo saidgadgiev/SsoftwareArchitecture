@@ -11,10 +11,7 @@ public class ModelStore implements IModelChanger{
     public Scene scenes;
     public Flash flashes;
     public Camera cameras;
-    private IModelChangeObserver changeObserver;
-
     public ModelStore(IModelChangeObserver changeObserver) {
-        this.changeObserver = changeObserver;
         this.models = new PoligonalModel(new Poligon(new Point3D()), new Texture());
         this.cameras = new Camera(new Point3D(), new Angle3D());
         this.flashes = new Flash(new Point3D(), new Angle3D(), new Color(),power);
