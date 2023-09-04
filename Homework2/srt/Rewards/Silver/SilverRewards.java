@@ -1,8 +1,8 @@
-package srt.Rewards.Gold;
+package srt.Rewards.Silver;
 
 import srt.Abstractions.IGameItem;
 
-public class GoldRewards implements IGameItem {
+public class SilverRewards implements IGameItem{
     /**
      * открывать и возвращать содержимое сундука
      *
@@ -10,6 +10,7 @@ public class GoldRewards implements IGameItem {
      */
     @Override
     public String open() {
-        return "Gold";
+        return "Silver";
     }
+    
 }
